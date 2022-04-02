@@ -1,0 +1,90 @@
+//-------------"Register & Login"-------------------
+POST http://localhost:3000/users/register
+Content-Type: application/json
+
+{
+"username":"aquaman@dominio.es", "password":"man$Super3"
+}
+
+####
+POST http://localhost:3000/users/login
+Content-Type: application/json
+
+{
+"username":"aquaman@dominio.es", "password":"man$Super3"
+}
+####
+
+POST http://localhost:3000/users/register
+Content-Type: application/json
+
+{
+"username":"spyder@dominio.es", "password":"man$Super6"
+}
+
+####
+POST http://localhost:3000/users/login
+Content-Type: application/json
+
+{
+"username":"spyder@dominio.es", "password":"man$Super6"
+}
+
+####
+
+POST http://localhost:3000/users/register
+Content-Type: application/json
+
+{
+"username":"black@dominio.es", "password":"panther$Super2"
+}
+
+####
+POST http://localhost:3000/users/login
+Content-Type: application/json
+
+{
+"username":"black@dominio.es", "password":"panther$Super2"
+}
+
+///-------------"add Grants"-------------------
+###
+POST http://localhost:3000/users/grants
+Content-Type: application/json
+
+{
+"username":"aquaman@dominio.es", "grants":["create_database","create_role","create_table","create_view"]
+}
+
+
+//-------------"Get Full User"-------------------
+###
+
+POST http://localhost:3000/users/user
+Content-Type: application/json
+
+{
+"username":"aquaman@dominio.es"
+}
+
+
+///-------------"Profile data"-------------------
+###
+POST http://localhost:3000/users/register
+Content-Type: application/json
+
+{
+"username":"flash@dominio.es", "password":"man$Super3"
+}
+
+###
+POST http://localhost:3000/users/profiledata
+Content-Type: application/json
+
+{
+"username":"flash@dominio.es", "profiledata":{
+    "city":"Barcelona",
+    "region":"Barcelona",
+    "zip":"08032"
+    }
+}
